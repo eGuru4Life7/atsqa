@@ -1,0 +1,201 @@
+<div class="sidebar-wrapper scroller">
+  <div class="user">
+      <div class="photo">
+          <img src="../assets/img/faces/card-profile2-square.jpg" />
+      </div>
+      <div class="info">
+          <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+              {{userName}}
+              <b class="caret"></b>
+          </a>
+          <div class="collapse" id="collapseExample">
+              <ul class="nav">
+
+                  <li>
+                      <a [routerLink]="'userprofile'">My Profile</a>
+                  </li>
+                  <li>
+                      <a (click)="logoutUser()">Logout</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <!--<div class="scroller">-->
+  <ul class="nav">
+      <li class="active">
+          <a style="background-color:#47a34b!important;box-shadow:none!important;" [routerLink]="'dashboard'">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+          </a>
+      </li>
+      <li>
+          <a data-toggle="collapse" href="#componentsExamples">
+              <i class="material-icons">description</i>
+              <p>Projects
+                  <b class="caret"></b>
+              </p>
+          </a>
+          <div class="collapse" id="componentsExamples">
+              <ul class="nav">
+                  <li>
+                      <a [routerLink]="'add/project'">
+                          <i class="material-icons">note_add</i>
+                          <p>Create</p></a>
+                  </li>
+                  <li>
+                      <a [routerLink]="'view/projects'">
+                          <i class="material-icons">library_books</i>
+                          <p>View</p></a>
+                  </li>
+              </ul>
+          </div>
+      </li>
+      <li>
+          <a data-toggle="collapse" href="#developer">
+              <i class="material-icons">person</i>
+              <p>Developer
+                  <b class="caret"></b>
+              </p>
+          </a>
+          <div class="collapse" id="developer">
+              <ul class="nav">
+                  <!--<li>
+                      <a [routerLink]="'add/developer'">
+                          <i class="material-icons">note_add</i>
+                          <p>Create</p></a>
+                  </li>-->
+                  <li>
+                      <a [routerLink]="'view/developers'">
+                          <i class="material-icons">library_books</i>
+                          <p>View</p></a>
+                  </li>
+                  <li>
+                      <a [routerLink]="'invite/developer'">
+                          <i class="material-icons">mail</i>
+                          <p>Invite Developer</p></a>
+                  </li>
+              </ul>
+          </div>
+      </li>
+      <li>
+          <a data-toggle="collapse" href="#phases">
+              <i class="material-icons">toc</i>
+              <p>Requirements
+                  <b class="caret"></b>
+              </p>
+          </a>
+          <div class="collapse" id="phases">
+              <ul class="nav">
+                  <li>
+                      <a data-toggle="collapse" href="#modules">
+                          <i class="material-icons">view_module</i>
+                          <p>Module
+                              <b class="caret"></b>
+                          </p>
+                      </a>
+                      <div class="collapse" id="modules">
+                          <ul class="nav">
+                              <li>
+                                  <a [routerLink]="'phases/requirements/modules/add'">
+                                      <i class="material-icons">note_add</i>
+                                      <p>Create</p></a>
+                              </li>
+                              <li>
+                                  <a [routerLink]="'phases/requirements/modules'">
+                                      <i class="material-icons">library_books</i>
+                                      <p>View</p></a>
+                              </li>
+                          </ul>
+                      </div>
+                  </li>
+                  <li>
+                      <a data-toggle="collapse" href="#reqs">
+                          <i class="material-icons">content_paste</i>
+                          <p>Specification
+                              <b class="caret"></b>
+                          </p>
+                      </a>
+                      <div class="collapse" id="reqs">
+                          <ul class="nav">
+                              <li>
+                                  <a [routerLink]="'phases/requirements/add'">
+                                      <i class="material-icons">note_add</i>
+                                      <p>Create</a>
+                              </li>
+                              <li>
+                                  <a [routerLink]="'phases/requirements'">
+                                      <i class="material-icons">library_books</i>
+                                      <p>View</a>
+                              </li>
+                            </ul>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+
+      </li>
+
+      <li>
+          <a data-toggle="collapse" href="#tp">
+              <i class="material-icons">toc</i>
+              <p>Test Plan
+                  <b class="caret"></b>
+              </p>
+          </a>
+          <div class="collapse" id="tp">
+              <ul class="nav">
+                      <li>
+                              <a data-toggle="collapse" href="#release">
+                                  <i class="material-icons">new_releases</i>
+                                  <p>Release
+                                      <b class="caret"></b>
+                                  </p>
+                              </a>
+                              <div class="collapse" id="release">
+                                  <ul class="nav">
+                                      <li>
+                                          <a [routerLink]="'testplan/release/add'">
+                                              <i class="material-icons">note_add</i>
+                                              <p>Create</p></a>
+                                      </li>
+                                      <li>
+                                          <a [routerLink]="'testplan/release/view'">
+
+                                              <i class="material-icons">library_books</i>
+                                              <p>View</p> </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </li>
+                  <li>
+                      <a data-toggle="collapse" href="#build">
+                          <i class="material-icons">build</i>
+                          <p>Build
+                              <b class="caret"></b>
+                          </p>
+                      </a>
+                      <div class="collapse" id="build">
+                          <ul class="nav">
+                              <li>
+                                  <a [routerLink]="'testplan/build/add'">
+                                      <i class="material-icons">note_add</i>
+                                      <p>Create</p></a>
+                              </li>
+                              <li>
+                                  <a [routerLink]="'testplan/build/view'">
+                                      <i class="material-icons">library_books</i>
+                                    <p>View</p> </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </li>
+
+              </ul>
+          </div>
+
+      </li>
+
+  </ul>
+  <!--</div>-->
+</div>

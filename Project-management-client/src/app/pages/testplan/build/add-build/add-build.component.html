@@ -1,0 +1,114 @@
+<div class="row"><div class="container-fluid"><div style="float:none!important;margin:0 auto;" class="col-md-10">
+    <div class="card">
+        <div class="card-header card-header-icon" data-background-color="green">
+            <i style="background-color:transparent!important;" class="material-icons">build</i>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-content">
+              <h4 class="card-title">Add Build</h4>
+              <div class="form-group label-floating is-empty">
+                  <select class="selectpicker" data-style="btn btn-primary" id="project" (change)="fetchRelease()" title="Select Project" data-size="7" [(ngModel)]="build.projectid" [ngModelOptions]="{standalone: true}">
+                     <option disabled selected value="0"> Select Project</option>
+                    <option *ngFor="let project of projects" value="{{project.id}}">{{project.title}}</option>
+                  </select>
+                <span class="material-input"></span>
+              </div>
+              <div class="form-group label-floating is-empty">
+                <select class="selectpicker" data-style="btn btn-primary" id="release" title="Select Release" data-size="7" [(ngModel)]="build.releaseid" [ngModelOptions]="{standalone: true}">
+                   <option disabled selected value="0"> Select Release</option>
+                  <option *ngFor="let release of releases" value="{{release.id}}">{{release.title}}</option>
+                </select>
+              <span class="material-input"></span>
+            </div>
+              <div class="form-group label-floating is-empty">
+                  <label class="control-label">
+                      Title
+                      <small>*</small>
+                  </label>
+                  <input class="form-control" type="text" required="true" id="title" aria-required="true" [(ngModel)]="build.title" [ngModelOptions]="{standalone: true}">
+                <span class="material-input"></span>
+              </div>
+              <div class="form-group label-floating">
+                <label class="control-label">
+                    Build Date
+                    <small>*</small>
+                </label>
+                <!-- <material-datepicker [(date)]="date1" (onSelect)="onSelectEndDate($event)" dateFormat="YYYY-MM-DD"></material-datepicker> -->
+                <!-- <material-datepicker [(date)]="DD-MM-YYYY"></material-datepicker> -->
+                <input type="text" class="form-control datepicker" id="builddate" value="10/05/2016"   [(ngModel)]="build.builddate" [ngModelOptions]="{standalone: true}"/>
+            </div>
+              <div class="form-group label-floating is-empty">
+                  <label class="control-label">
+                     Build Notes
+                      <small>*</small>
+                  </label>
+                  <input class="form-control" type="text" required="true" aria-required="true" id="buildnotes" [(ngModel)]="build.buildnote" [ngModelOptions]="{standalone: true}">
+                <span class="material-input"></span>
+              </div>
+            </div>
+          </div>
+          
+          <div style="visibility:hidden;" class="col-md-1">Kashan</div>
+          <div style="padding-top:25px;" class="col-md-4">
+    
+            <div class="card-content">
+                <div class="form-group label-floating is-empty">
+                    <select class="selectpicker" data-style="btn btn-primary" id="status" title="Select Prioriyy" data-size="7" [(ngModel)]="build.status" [ngModelOptions]="{standalone: true}">
+                       <option disabled selected value="0"> Status</option>
+                       <option value="high">High</option>
+                       <option value="med">Medium</option>
+                       <option value="low">Low</option>
+                    </select>
+                  <span class="material-input"></span>
+                </div>
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">
+                        Description
+                        <small>*</small>
+                    </label>
+                    <input class="form-control" type="text" required="true" aria-required="true" id="description" [(ngModel)]="build.description" [ngModelOptions]="{standalone: true}">
+                  <span class="material-input"></span>
+                </div>
+
+                <!-- <div class="form-group label-floating">
+                    <label class="control-label">
+                        End Date
+                        <small>*</small>
+                    </label>
+                    <input type="text" class="form-control datetimepicker" value="10/05/2016" [(ngModel)]="build.enddate" [ngModelOptions]="{standalone: true}"/>
+                </div> -->
+                
+                <!-- <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                    <label class="control-label">
+                        Resources
+                        <small>*</small>
+                    </label>
+                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                    <div>
+                        <span style="background-color:#47a34b!important;" class="btn btn-round btn-file">
+                            <span class="fileinput-new">Select file</span>
+                            <span class="fileinput-exists">Change</span>
+                            <input type="file" name="..." />
+                        </span>
+                        <a href="#pablo" style="background-color:#47a34b!important;" class="btn btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i></a>
+                    </div>
+                </div> -->
+
+              <div class="form-group label-floating">
+                <button style="background-color:#47a34b!important;" class="btn btn-info" (click)="addBuild()">Add Build</button>
+              </div>
+            </div>
+          </div>
+          <div style="visibility:hidden;" class="col-md-3">Kashan</div>
+        </div>
+        
+    </div>
+    </div></div></div>
+    
+    <!--<script>
+      $(document).ready(function() {
+          demo.initFormExtendedDatetimepickers();
+      });
+    </script>-->
+    

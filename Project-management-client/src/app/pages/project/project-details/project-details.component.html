@@ -1,0 +1,203 @@
+<div class="row"><div class="container-fluid"><div style="float:none!important;margin:0 auto;" class="col-md-10">
+    <div class="card">
+        <div class="card-header card-header-icon" data-background-color="green">
+            <i style="background-color:transparent!important;" class="material-icons">mail_outline</i>
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-4">
+            <div class="card-content">
+              <h4 class="card-title">Project Details</h4>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Title
+                      <small>*</small>
+                  </label>
+                  <input class="form-control" type="text" required="true" [(ngModel)]="project.title" [ngModelOptions]="{standalone: true}" />
+              </div>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Description
+                  </label>
+                  <input class="form-control" type="text" [(ngModel)]="project.description" [ngModelOptions]="{standalone: true}"/>
+              </div>
+            </div>
+          </div>
+          <div style="visibility:hidden;" class="col-md-1">Kashan</div>
+          <div style="padding-top:25px;" class="col-md-4">
+
+            <div class="card-content">
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Start Date
+                      <small>*</small>
+                  </label>
+                  <input type="text" class="form-control " value="10/05/2016" disbaled [(ngModel)]="project.startdate" [ngModelOptions]="{standalone: true}"/>
+              </div>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      End Date
+                      <small>*</small>
+                  </label>
+                  <input type="text" class="form-control " value="10/05/2016" disbaled [(ngModel)]="project.enddate" [ngModelOptions]="{standalone: true}"/>
+              </div>
+              <div class="form-group label-floating">
+                <button style="background-color:#47a34b!important;" class="btn btn-info" (click)="addProject()">Add Project</button>
+              </div>
+            </div>
+          </div>
+          <!--<div class="col-md-4">
+            <div class="card-content">
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Email Address
+                      <small>*</small>
+                  </label>
+                  <input class="form-control" name="email" type="email" required="true" />
+              </div>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Email Address
+                      <small>*</small>
+                  </label>
+                  <input class="form-control" name="email" type="email" required="true" />
+              </div>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Password
+                      <small>*</small>
+                  </label>
+                  <input class="form-control" name="password" id="registerPassword" type="password" required="true" />
+              </div>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Confirm Password
+                      <small>*</small>
+                  </label>
+                  <input class="form-control" name="password_confirmation" id="registerPasswordConfirmation" type="password" required="true" equalTo="#registerPassword" />
+              </div>
+              <div class="category form-category">
+                  <small>*</small> Required fields</div>
+              <div class="form-footer text-right">
+                  <div class="checkbox pull-left">
+                      <label>
+                          <input type="checkbox" name="optionsCheckboxes"> Subscribe to newsletter
+                      </label>
+                  </div>
+                  <button type="submit" class="btn btn-rose btn-fill">Register</button>
+              </div>
+            </div>
+          </div>-->
+        <!-- </div>  -->
+        <div class="row">
+        <div class="col-md-4">
+            <div class="card-content">
+              <h4 class="card-title">Project Details   </h4>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Title
+                      <small>*</small>
+                  </label>
+                  <!-- <input class="form-control" type="text" required="true" [(ngModel)]="project.title"  [ngModelOptions]="{standalone: true}" />
+            -->
+{{details.title}}
+
+                </div></div></div>
+              <div style="visibility:hidden;" class="col-md-2"></div>
+              <div class="col-md-4">
+              <div class="card-content">
+                  <h4 style="visibility:hidden;" class="card-title">Project Details</h4>
+              <!-- <div class="form-group label-floating">
+
+                  <!-- <input class="form-control" type="text" [(ngModel)]="project.status" [ngModelOptions]="{standalone: true}"/>
+              </div> -->
+               <label class="control-label">
+                      Status
+                  </label>
+                  {{getStatus(details.status)}}
+              <!-- </div> -->
+
+            </div>
+          </div>
+          <div style="padding-left:55px;width:88%;" class="col-md-offset-1 col-md-11">
+              <div class="card-content">
+                  <h4 style="visibility:hidden;" class="card-title">Project Details</h4>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Description
+                  </label>
+                  <!-- <input class="form-control" type="text" [(ngModel)]="project.description" [ngModelOptions]="{standalone: true}"/>
+             -->
+             {{details.description}}
+                </div>
+            </div>
+          </div>
+          <div style="padding-left:55px;width:88%;" class="col-md-offset-1 col-md-11">
+              <div class="card-content">
+                  <h4 style="visibility:hidden;" class="card-title">Project Details</h4>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Type
+                  </label>
+                  <!-- <input class="form-control" type="text" [(ngModel)]="project.description" [ngModelOptions]="{standalone: true}"/>
+             -->
+             {{getType(details.type)}}
+                </div>
+            </div>
+          </div>
+          <div style="padding-left:55px;width:88%;" class="col-md-offset-1 col-md-11">
+              <div class="card-content">
+                  <h4 style="visibility:hidden;" class="card-title">Project Details</h4>
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Sub Type
+                  </label>
+                  <!-- <input class="form-control" type="text" [(ngModel)]="project.description" [ngModelOptions]="{standalone: true}"/>
+             -->
+             {{getSubType(details.subtype)}}
+                </div>
+            </div>
+          </div>
+          <div style="padding-left:55px;" class="col-md-offset-1 col-md-4">
+          <div class="card-content">
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      Start Date
+                      <small>*</small>
+                  </label>
+
+                  <!-- <input type="text" class="form-control " value="10/05/2016" disbaled [(ngModel)]="project.startdate" [ngModelOptions]="{standalone: true}"/>
+             -->
+             {{details.startdate}}
+                </div>
+        </div>
+      </div>
+      <div style="padding-left:55px;" class="col-md-offset-3 col-md-4">
+          <div class="card-content">
+              <div class="form-group label-floating">
+                  <label class="control-label">
+                      End Date
+                      <small>*</small>
+                  </label>
+                  <!-- <input type="text" class="form-control " value="10/05/2016" disbaled [(ngModel)]="project.enddate" [ngModelOptions]="{standalone: true}"/>
+             -->
+
+                </div>
+       {{details.enddate}}
+              </div>
+      </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+    </div></div></div>
+
+    <!--<script>
+      $(document).ready(function() {
+          demo.initFormExtendedDatetimepickers();
+      });
+    </script>-->

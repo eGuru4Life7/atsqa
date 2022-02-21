@@ -1,0 +1,42 @@
+<div class="row"><div class="container-fluid"><div style="float:none!important;margin:0 auto;" class="col-md-6">
+  <div class="card">
+      <div class="card-header card-header-icon" data-background-color="green">
+          <i style="background-color:transparent!important;"  class="material-icons">mail</i>
+      </div>
+      <div class="card-content">
+          <h4 class="card-title">Invite Developer</h4>
+       
+          <div style="display:none;" class="form-group label-floating is-empty">
+              <label class="control-label">
+                  Last Name
+                  <small>*</small>
+              </label>
+              <input class="form-control" type="text" required="true" aria-required="true" >
+            <span class="material-input"></span>
+          </div>
+          <div class="form-group label-floating is-empty">
+              <label class="control-label">
+                  Email
+                  <small>*</small>
+              </label>
+              <input class="form-control" type="email" required="true" aria-required="true" [(ngModel)]="developerData.email" [ngModelOptions]="{standalone: true}">
+            <span class="material-input"></span>
+          </div>
+          <div style="display:none;" class="form-group label-floating is-empty">
+              <label class="control-label">
+                  Password
+                  <small>*</small>
+              </label>
+              <input class="form-control" type="password" required="true" aria-required="true" [(ngModel)]="developerData.password" [ngModelOptions]="{standalone: true}">
+            <span class="material-input"></span>
+          </div>
+          <div class="category form-category">
+              <!--<small>*</small> Required fields</div>-->
+          <div class="form-footer text-center">
+              <button style="background-color:#47a34b!important;" type="submit" class="btn btn-fill" >Submit</button>
+          </div>
+      </div>
+  </div>
+  </div>
+  </div></div></div>
+  

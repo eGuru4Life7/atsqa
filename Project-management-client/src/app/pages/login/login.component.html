@@ -1,0 +1,46 @@
+<div style="background-image:url('../../../../assets/img/lock.jpeg');background-size:cover;" class="full-page login-page" filter-color="black" data-image="../../../../assets/img/login.jpeg">
+    <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                    <form method="#" action="#">
+                        <div class="card card-login">
+                            <div class="card-header text-center" data-background-color="green">
+                                <h4 class="card-title">Login</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">email</i>
+                                    </span>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Email address</label>
+                                        <input type="email" class="form-control" id="email" [(ngModel)]="loginData.email" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="material-icons">lock_outline</i>
+                                    </span>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Password</label>
+                                        <input type="password" class="form-control" id="password" [(ngModel)]="loginData.password" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer text-center">
+                                <a type="button" class="btn  btn-simple btn-wd btn-lg" (click)="loginUser()">Let's go</a>
+                                <a style="color:black;" type="button" class="btn  btn-simple btn-wd btn-lg" (click)="forgetPassword()">FORGOT PASSWORD ?</a>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <app-footer></app-footer>
+    </footer>
+</div>

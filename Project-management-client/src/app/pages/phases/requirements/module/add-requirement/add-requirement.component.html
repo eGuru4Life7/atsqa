@@ -1,0 +1,99 @@
+<div class="row"><div class="container-fluid"><div style="float:none!important;margin:0 auto;" class="col-md-10">
+<div class="card">
+    <div class="card-header card-header-icon" data-background-color="green">
+        <i style="background-color:transparent!important;" class="material-icons">content_paste</i>
+    </div>
+    <div class="card-content">
+        <h4 class="card-title">Add Requirement</h4>
+        <div class="col-md-5">
+        <div class="form-group label-floating is-empty">
+            <label class="control-label">
+                Title
+                <small>*</small>
+            </label>
+            <input class="form-control" type="text" required="true" id="title" aria-required="true" [(ngModel)]="requirement.title" [ngModelOptions]="{standalone: true}">
+          <span class="material-input"></span>
+        </div>
+        <div class="form-group label-floating is-empty">
+            <select class="selectpicker" data-style="btn btn-primary" id="status" title="Select Status" data-size="7" [(ngModel)]="requirement.status" [ngModelOptions]="{standalone: true}">
+               <option disabled selected value="0"> Select Status</option>
+               <option value="inprogress">In Progress</option>
+               <option value="pending">Pending</option>
+               <option value="completed">Completed</option>
+               <option value="dispatched">Dispatched</option>
+            </select>
+          <span class="material-input"></span>
+        </div>
+        <div class="form-group label-floating is-empty">
+            <select class="selectpicker" data-style="btn btn-primary" id="project" (change)="fetchModules()" title="Select Project" data-size="7" [(ngModel)]="requirement.projectid" [ngModelOptions]="{standalone: true}">
+               <option disabled selected value="0"> Select Project</option>
+              <option *ngFor="let project of projects" value="{{project.id}}">{{project.title}}</option>
+            </select>
+          <span class="material-input"></span>
+        </div>
+        <div class="form-group label-floating is-empty">
+            <select class="selectpicker" data-style="btn btn-primary" id="developer" title="Select Assignee" data-size="7" [(ngModel)]="requirement.assigneeid" [ngModelOptions]="{standalone: true}">
+               <option disabled selected value="0"> Select Developer</option>
+              <option *ngFor="let developer of developers" value="{{developer.id}}">{{developer.fname}} {{developer.lname}}</option>
+            </select>
+          <span class="material-input"></span>
+        </div>
+        <div style="visibility:hidden;" class="form-group label-floating is-empty">
+            <select class="selectpicker" data-style="btn btn-primary" id="dev" multiple title="Select Assignee" data-size="7" [(ngModel)]="devops" [ngModelOptions]="{standalone: true}" >
+               <option disabled selected value="0"> Select Developer</option>
+              <option *ngFor="let developer of developers" value="{{developer.id}}">{{developer.fname}} {{developer.lname}}</option>
+            </select>
+          <span class="material-input"></span>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
+    
+        <div class="form-group label-floating is-empty">
+            <label class="control-label">
+                Description
+                <small>*</small>
+            </label>
+            <input class="form-control" type="text" required="true" id="description" aria-required="true" [(ngModel)]="requirement.description" [ngModelOptions]="{standalone: true}">
+          <span class="material-input"></span>
+        </div>
+       
+        <div class="form-group label-floating is-empty">
+            <select class="selectpicker" data-style="btn btn-primary" id="priority" title="Select Prioriyy" data-size="7" [(ngModel)]="requirement.priority" [ngModelOptions]="{standalone: true}">
+               <option disabled selected value="0"> Select Priority</option>
+               <option value="high">High</option>
+               <option value="med">Medium</option>
+               <option value="low">Low</option>
+            </select>
+          <span class="material-input"></span>
+        </div>
+       
+        <div class="form-group label-floating is-empty">
+            <select class="selectpicker" data-style="btn btn-primary" id="module" title="Select Module" data-size="7" [(ngModel)]="requirement.moduleid" [ngModelOptions]="{standalone: true}">
+               <option disabled selected value="0"> Select Module</option>
+              <option *ngFor="let module of modules" value="{{module.id}}">{{module.title}}</option>
+            </select>
+          <span class="material-input"></span>
+        </div>
+        <div style="visibility:hidden;" class="form-group label-floating is-empty">
+            <select class="selectpicker" data-style="btn btn-primary" id="mod" title="Select Module" data-size="7" [(ngModel)]="requirement.moduleid" [ngModelOptions]="{standalone: true}">
+               <option disabled selected value="0"> Select Module</option>
+              <option *ngFor="let module of modules" value="{{module.id}}">{{module.title}}</option>
+            </select>
+          <span class="material-input"></span>
+        </div>
+      
+    </div>
+    <div class="col-md-2">
+    <div class="category form-category">
+        <!--<small>*</small> Required fields</div>-->
+    <div class="form-footer">
+        <button style="background-color: #47a34b!important;"  type="submit" class="btn btn-fill" (click)="addRequirement()">Add</button>
+    </div>
+</div>
+</div>
+    
+     
+</div>
+</div></div>
+</div>

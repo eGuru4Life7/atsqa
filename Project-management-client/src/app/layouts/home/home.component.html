@@ -1,0 +1,30 @@
+<div class="wrapper">
+        <div class="sidebar" data-active-color="rose" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+            <!--
+        Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
+        Tip 2: you can also add an image using data-image tag
+        Tip 3: you can change the color of the sidebar with data-background-color="white | black"
+    -->
+            <!-- <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Admin
+                </a>
+            </div> -->
+            <div class="logo logo-mini">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    AD
+                </a>
+            </div>
+
+                <app-sidebar></app-sidebar>
+        </div>
+        <div class="main-panel">
+            <app-header></app-header>
+            <div class="content">
+                <router-outlet></router-outlet>
+            </div>
+            <footer class="footer">
+                <app-footer></app-footer>
+            </footer>
+        </div>
+    </div>

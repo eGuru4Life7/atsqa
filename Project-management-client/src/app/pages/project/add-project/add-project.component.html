@@ -1,0 +1,82 @@
+<div class="row"><div class="container-fluid"><div style="float:none!important;margin:0 auto;" class="col-md-10">
+<div class="card">
+    <div class="card-header card-header-icon" data-background-color="green">
+        <i style="background-color:transparent!important;" class="material-icons">note_add</i>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card-content">
+          <h4 class="card-title">Add Project</h4>
+          <div class="form-group label-floating">
+              <label class="control-label">
+                  Title
+                  <small>*</small>
+              </label>
+              <input class="form-control" type="text" id="title" required="true" [(ngModel)]="project.title" [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="form-group label-floating">
+              <label class="control-label">
+                  Description
+              </label>
+              <input class="form-control" type="text" id="description" [(ngModel)]="project.description" [ngModelOptions]="{standalone: true}"/>
+          </div>
+          <div class="form-group label-floating">
+            <select class="selectpicker" data-style="btn btn-primary" id="status" title="Select Status" data-size="7" [(ngModel)]="project.status" [ngModelOptions]="{standalone: true}" >
+                <option disabled selected value="0" > Status</option>
+               <option value="1"> Pending</option>
+               <option value="2"> Active</option>
+               <option value="3"> Completed</option>
+               <option value="4"> Inactive</option>
+             </select>
+        </div>
+          <div class="form-group label-floating">
+            <select class="selectpicker" data-style="btn btn-primary" id="type" title="Select Project Type" data-size="7" [(ngModel)]="project.type" [ngModelOptions]="{standalone: true}" >
+                <option disabled selected value="0"> Project Type</option>
+               <option value="1"> Front Office</option>
+               <option value="2"> Back Office</option>
+             </select>
+            </div>
+        </div>
+      </div>
+      <div style="visibility:hidden;" class="col-md-1">Kashan</div>
+      <div style="padding-top:25px;" class="col-md-4">
+
+        <div class="card-content">
+          <div class="form-group label-floating">
+              <label class="control-label">
+                  Start Date
+                  <small>*</small>
+              </label>
+              <!-- <material-datepicker [(date)]="date" (onSelect)="onSelectStartDate($event)" dateFormat="YYYY-MM-DD"></material-datepicker> -->
+
+              <input type="text" class="form-control datepicker" id="startdate"  (onchange)="onSelectStartDate($event)" [(ngModel)]="project.startdate" [ngModelOptions]="{standalone: true}"/>
+          </div>
+          <div class="form-group label-floating">
+              <label class="control-label">
+                  End Date
+                  <small>*</small>
+              </label>
+              <!-- <material-datepicker [(date)]="date1" (onSelect)="onSelectEndDate($event)" dateFormat="YYYY-MM-DD"></material-datepicker> -->
+              <!-- <material-datepicker [(date)]="DD-MM-YYYY"></material-datepicker> -->
+              <input type="text" class="form-control datepicker" id="enddate" (onchange)="onSelectEndDate($event)" (onSelect)="onSelectEndDate($event)" [(ngModel)]="project.enddate" [ngModelOptions]="{standalone: true}"/>
+          </div>
+          <div class="form-group label-floating">
+            <select class="selectpicker"  data-style="btn btn-primary" id="subtype" title="Select Project Sub Type" data-size="7" [(ngModel)]="project.subtype" [ngModelOptions]="{standalone: true}" >
+                <option disabled selected value="0" > Project Sub Type</option>
+               <option value="1"> HR System</option>
+               <option value="2"> Commissions</option>
+               <option value="3"> Vendor</option>
+               <option value="4"> Management</option>
+             </select>
+        </div>
+      
+          <div class="form-group label-floating">
+            <button style="background-color:#47a34b!important;" class="btn btn-info" (click)="addProject()">Add Project</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+</div></div></div>
+

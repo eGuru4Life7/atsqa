@@ -1,0 +1,56 @@
+<div class="row"><div class="container-fluid"><div style="float:none!important;margin:0 auto;" class="col-md-10">
+<div class="card">
+    <div class="card-header card-header-icon" data-background-color="green">
+        <i style="background-color:transparent!important;"  class="material-icons">person</i>
+    </div>
+    <div class="card-content">
+        <h4 class="card-title">Add Developer</h4>
+        <div class="form-group label-floating is-empty">
+            <label class="control-label">
+                Username
+                <small>*</small>
+            </label>
+            <input class="form-control" type="text" id="=username" required="true" aria-required="true" [(ngModel)]="developerData.username" [ngModelOptions]="{standalone: true}">
+          <span class="material-input"></span>
+        </div>
+        <div class="form-group label-floating is-empty">
+            <label class="control-label">
+                First Name
+                <small>*</small>
+            </label>
+            <input class="form-control" type="text" id="fname" required="true" aria-required="true" [(ngModel)]="developerData.fname" [ngModelOptions]="{standalone: true}">
+          <span class="material-input"></span>
+        </div>
+        <div class="form-group label-floating is-empty">
+            <label class="control-label">
+                Last Name
+                <small>*</small>
+            </label>
+            <input class="form-control" type="text" required="true" id="lname" aria-required="true" [(ngModel)]="developerData.lname" [ngModelOptions]="{standalone: true}">
+          <span class="material-input"></span>
+        </div>
+        <div class="form-group label-floating is-empty">
+            <label class="control-label">
+                Email
+                <small>*</small>
+            </label>
+            <input class="form-control" type="email" required="true" id="email" aria-required="true" [(ngModel)]="developerData.email" [ngModelOptions]="{standalone: true}">
+          <span class="material-input"></span>
+        </div>
+        <div class="form-group label-floating is-empty">
+            <label class="control-label">
+                Password
+                <small>*</small>
+            </label>
+            <input class="form-control" type="password" required="true" id="password" aria-required="true" [(ngModel)]="developerData.password" [ngModelOptions]="{standalone: true}">
+          <span class="material-input"></span>
+        </div>
+        <div class="category form-category">
+            <!--<small>*</small> Required fields</div>-->
+        <div class="form-footer text-right">
+            <button style="background-color:#47a34b!important;" type="submit" class="btn btn-fill" (click)="addDeveloper()">Add</button>
+        </div>
+    </div>
+</div>
+</div>
+</div></div></div>

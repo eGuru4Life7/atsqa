@@ -1,0 +1,201 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="col-sm-8 col-sm-offset-2">
+            <!--      Wizard container        -->
+            <div class="wizard-container">
+                <div class="card wizard-card" data-color="green" id="wizardProfile">
+                    <form action="" method="">
+                        <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+                        <div class="wizard-header">
+                            <h3 class="wizard-title">
+                                Build Your Profile
+                            </h3>
+                            <h5>This information will let us know more about you.</h5>
+                        </div>
+                        <div class="wizard-navigation">
+                            <ul>
+                                <li>
+                                    <a href="#about" data-toggle="tab">About</a>
+                                </li>
+                                <li>
+                                    <a href="#account" data-toggle="tab">Account</a>
+                                </li>
+                                <li>
+                                    <a href="#address" data-toggle="tab">Personal Information</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane" id="about">
+                                <div class="row">
+                                    <h4 class="info-text"> Let's start with the basic information  </h4>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                            <div class="fileinput-new thumbnail">
+                                                <img src="../../assets/img/image_placeholder.jpg" alt="...">
+                                            </div>
+                                            <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                            <div>
+                                                <span style="background-color:#4caf50;" class="btn btn-round btn-file">
+                                                    <span class="fileinput-new">Select image</span>
+                                                    <span class="fileinput-exists">Change</span>
+                                                    <input type="file" name="..." />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">face</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">First Name
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="firstname" id="fname" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">record_voice_over</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Last Name
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="lastname" id="lname"  type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                                                                <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">record_voice_over</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Country
+                                                    <small>(required)</small>
+                                                </label>
+                                                <select class="form-control" disabled="true">
+                                                  <option>Select Country</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">record_voice_over</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">City
+                                                    <small>(required)</small>
+                                                </label>
+                                                <select class="form-control" disabled="true">
+                                                  <option>Select City</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">record_voice_over</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">State
+                                                    <small>(required)</small>
+                                                </label>
+                                                <select class="form-control" disabled="true">
+                                                  <option>Select State</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="account">
+                                <h4 class="info-text">Here You Can Change Your Contact Details</h4>
+                                <div class="row">
+                                    <div class="col-sm-offset-3 col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">email</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Email
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="email" id="email" type="email" class="form-control" disabled="true">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-offset-3 col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">phone</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Home
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="telephone" id="home" type="tel" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-offset-3 col-sm-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">phone</i>
+                                            </span>
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Zip Code
+                                                    <small>(required)</small>
+                                                </label>
+                                                <input name="telephone" id="zipcode" type="tel" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="address">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4 class="info-text">Mobile And Address Information</h4>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Mobile</label>
+                                            <input type="tel" id="mobile" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Address</label>
+                                            <input type="text" id="addresss" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Address1</label>
+                                            <input type="text" id="addresss1" class="form-control">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wizard-footer">
+                            <div class="pull-right">
+                                <input style="background-color:#47a34b!important;" type='button' class='btn btn-next btn-fill btn-wd' name='next' value='Next' />
+                                <input style="background-color:#47a34b!important;" type='button' class='btn btn-finish btn-fill btn-wd' name='finish' value='Finish' (click)="updateUser()"/>
+                            </div>
+                            <div class="pull-left">
+                                <input style="background-color:#47a34b!important;" type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- wizard container -->
+        </div>
+    </div>
+</div>
